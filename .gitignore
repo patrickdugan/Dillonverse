@@ -9,5 +9,4 @@ dist/
 .vendor/
 catalog/*.jsonl
 catalog/provider-state.json
-transcripts/private/**
-!transcripts/private/.gitkeep
+

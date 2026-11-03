@@ -26,8 +26,8 @@ Use `--limit 10` to process a smaller batch, or repeat `--video-id ID` to select
 
 ## Storage and provenance
 
-- `catalog/videos.jsonl` is generated and ignored by Git. It stores video IDs, canonical links, titles, dates, durations, discovery source, and caption status.
-- Caption VTT files and timestamped text are written to `transcripts/private/`, which is ignored by Git.
+- `catalog/videos.jsonl` is a public metadata-only index of video IDs, canonical links, titles, dates, durations, discovery source, and caption availability. It contains no transcript text or local file paths.
+- Caption VTT files and timestamped text are written to `transcripts/private/` and are kept out of commits.
 - The collector uses `yt-dlp` to request YouTube-provided captions and does not download video or audio.
 - A missing caption is recorded as unavailable; it is not treated as proof that a transcript does not exist elsewhere.
 - Each channel upload is marked `review_required` for scope. Review clips, guests, and other non-show material before treating it as Tim Dillon's own comedy.
