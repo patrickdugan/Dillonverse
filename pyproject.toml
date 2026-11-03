@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dillonverse-corpus"
+version = "0.1.0"
+description = "Resumable, source-linked catalog and local caption collector for The Tim Dillon Show"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+collector = ["yt-dlp>=2025.1"]
+
+[project.scripts]
+dillonverse = "dillonverse.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["pipelines"]

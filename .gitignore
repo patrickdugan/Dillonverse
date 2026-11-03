@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.cache/
+.tmp/
+.vendor/
+catalog/*.jsonl
+catalog/provider-state.json
+transcripts/private/**
+!transcripts/private/.gitkeep
